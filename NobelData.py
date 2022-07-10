@@ -22,9 +22,9 @@ class NobelData:
         """Returns a sorted list of surnames of winners for a given year and category."""
         winners = []
 
-        if year == self._nobel_data["prizes"]["year"] and category == self._nobel_data["prizes"]["category"]:
-            for val in self._nobel_data["prizes"]["laureates"]:
-                winners.append(self._nobel_data["prizes"]["laureates"]["surname"])
+        if year == self._nobel_data["prizes"][0]["year"] and category == self._nobel_data["prizes"][1]["category"]:
+            for val in self._nobel_data["prizes"][0]["laureates"]:
+                winners.append(self._nobel_data["prizes"][0]["laureates"][2]["surname"])
 
         winners.sort()
 
