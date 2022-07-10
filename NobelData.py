@@ -23,8 +23,8 @@ class NobelData:
         winners = []
 
         if year == self._nobel_data["prizes"][0]["year"] and category == self._nobel_data["prizes"][1]["category"]:
-            for val in self._nobel_data["prizes"][0]["laureates"]:
-                winners.append(self._nobel_data["prizes"][0]["laureates"][2]["surname"])
+            #for val in self._nobel_data["prizes"][0]["laureates"]:
+            winners.append(self._nobel_data["prizes"][0]["laureates"][2]["surname"])
 
         winners.sort()
 
