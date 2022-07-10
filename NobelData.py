@@ -13,7 +13,7 @@ class NobelData:
 
     def __init__(self):
         """Initializes a dictionary of nobel prize data from a .json file."""
-        with open("prize.json", "r") as infile:
+        with open("nobels.json", "r") as infile:
             nobel_data = json.load(infile)
 
         self._nobel_data = nobel_data
