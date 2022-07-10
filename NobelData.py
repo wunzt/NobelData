@@ -11,9 +11,9 @@ class NobelData:
     """Creates a dictionary of nobel prize data from a .json file and returns a sorted list of surnames of winners
     for a given year and category."""
 
-    def __init__(self, file):
+    def __init__(self):
         """Initializes a dictionary of nobel prize data from a .json file."""
-        with open(file, "r") as infile:
+        with open("prize.json", "r") as infile:
             nobel_data = json.load(infile)
 
         self._nobel_data = nobel_data
@@ -29,3 +29,8 @@ class NobelData:
         winners.sort()
 
         return winners
+
+
+
+nd = NobelData()
+nd.search_nobel("2001", "economics")
