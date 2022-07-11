@@ -23,14 +23,10 @@ class NobelData:
         winners = []
 
         for val in self._nobel_data["prizes"]:
-            if year == self._nobel_data["prizes"][0]["year"] and category == self._nobel_data["prizes"][1]["category"]:
-                winners.append(self._nobel_data["prizes"][0]["laureates"][2]["surname"])
+            if year == val["year"] and category == val["category"]:
+                for winner in val["laureates"]:
+                    winners.append(winner["surname"])
 
         winners.sort()
 
         return winners
-
-
-
-nd = NobelData()
-nd.search_nobel("2001", "economics")
